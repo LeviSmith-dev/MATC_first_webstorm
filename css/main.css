@@ -96,18 +96,42 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+html {
+    background: url('../img/bestbg.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
 
 #wrapper {
     width:100%;
     height:100%;
-    background-color: #999999;
+    margin: 0 auto -8vw;
 }
 
 #nav {
-    display:inline-block;
+    display:flex;
+    justify-content: space-around;
     width:100%;
-    padding:10px 15px 10px 15px;
-    background-color: rgba(188,91,255,0.5);
+    /*background-color: rgba(188,91,255,0.5);*/
+    padding:15px 0 15px 0;
+
+}
+#nav a {
+    text-decoration: none;
+    color:white;
+}
+#nav a:hover {
+    color:#87c540;
+}
+
+
+#nav .logo img{
+    /*width:100%;*/
+    width:350px;
+    /*background-color: #b3d4fc;*/
 }
 
 .nav-link1 {
@@ -125,20 +149,151 @@ textarea {
     float:right;
 }
 
+/*=========================
+INDEX page
+==========================*/
+.indexContent {
+    /*width:100%;*/
+    background-color: rgba(85, 85, 85, 0.36);
+    display:flex;
+    color: rgb(135, 197, 64);
+    padding:15px;
+    margin:15px;
+}
+
+.main{
+    width:100%;
+    float:left;
+    justify-content: space-between;
+}
+
+.imageLeft{
+    width:350px;
+    padding-right:15px;
+}
+
+.imageRight{
+    width:350px;
+    float:right;
+}
+
+.mainRight {
+    float:right;
+    text-align: left;
+}
+
+.right{
+    float:right;
+}
 
 
 
+/*=========================
+            FORM page
+=========================*/
+#content{
+    width: 100%;
+    background-color: rgba(85, 85, 85, .36);
+    color:white;
+    padding:35px;
+}
 
 
+#content form {
+    margin:auto;
+}
+
+#content .button {
+    width:75px;
+}
+
+#content .form {
+    width:500px;
+}
+
+#content .marginBottom {
+    display:flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+#content textarea{
+    width:167px;
+}
+
+/*======================================
+Pins on image page
+======================================*/
+
+body {
+    display:block;
+    margin:8px;
+}
+.columns {
+    column-count: 5;
+    column-gap: 10px
+    column-fill:auto;
+    padding-top: 60px;
+}
 
 
+div {
+    display:block;
+}
 
+div.pin {
+    display:inline-block;
+    border:2px solid #a1a1a1;
+    box-shadow: 0px 3px rgba(34, 25, 25, 0.4);
+    margin:0px 2px 15px 0px;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    padding: 15px 15px 5px 15px;
+    background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+    opacity: 1;
+    border-radius: 5px;
+}
 
+.pin img {
+    width:100%;
+    border-radius: 3px;
+    border-bottom: 5px;
+    margin-bottom: 15px;
+}
 
+/* ==========================================================================
+Footer style
+ ============================================================================*/
+#footer, .push {
+    height:8vw;
+}
+#footer {
+    padding: 0px;
+    /*display: flex;*/
+    /*justify-content: space-between ;*/
+    bottom:0;
+}
 
+.footer-top {
+    padding:0px;
+    /*background-color: #b3d4fc;*/
+    color: white;
+}
 
+.footer-top p {
+    background-color: aqua;
+    text-align: center;
+}
 
-
+.footer-bottom {
+    background-color: #999999;
+    /*display:inline-block;*/
+    justify-content: center;
+    color: white;
+}
+.footer-bottom p {
+    text-align: center;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
