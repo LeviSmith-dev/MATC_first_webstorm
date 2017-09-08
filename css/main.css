@@ -100,6 +100,7 @@ textarea {
 
 html {
     background: url('../img/bestbg.jpg') no-repeat;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -152,41 +153,31 @@ html {
 /*=========================
 INDEX page
 ==========================*/
-.indexContent {
-    /*width:100%;*/
+.flex-container {
     background-color: rgba(85, 85, 85, 0.36);
     display:flex;
+    flex-wrap: wrap;
     color: rgb(135, 197, 64);
     padding:15px;
     margin:15px;
 }
 
-.main{
-    width:100%;
-    float:left;
-    justify-content: space-between;
+.flex-item {
+    width:50%;
+    justify-content: space-around;
 }
 
 .imageLeft{
-    width:350px;
-    padding-right:15px;
+    width:500px;
+    /*padding-right:15px;*/
+    padding-left:10%;
 }
 
 .imageRight{
-    width:350px;
-    float:right;
+    width:500px;
+    padding-left: 20%;
+    justify-content: center;
 }
-
-.mainRight {
-    float:right;
-    text-align: left;
-}
-
-.right{
-    float:right;
-}
-
-
 
 /*=========================
             FORM page
@@ -195,20 +186,16 @@ INDEX page
     width: 100%;
     background-color: rgba(85, 85, 85, .36);
     color:white;
-    padding:35px;
 }
-
 
 #content form {
     margin:auto;
+    width:500px;
 }
 
 #content .button {
     width:75px;
-}
-
-#content .form {
-    width:500px;
+    margin:15px;
 }
 
 #content .marginBottom {
@@ -221,8 +208,31 @@ INDEX page
     width:167px;
 }
 
+/*===============================
+            SERVICES PAGE
+===============================*/
+#flexContent{
+    padding-left: 15px;
+    display:flex;
+    flex-direction: row  ;
+    width:100%;
+    padding-bottom:15px;
+}
+
+iframe {
+    padding-left:25px;
+}
+
+.flex-item img{
+    width:500px;
+}
+
+#flexContent .flex-item {
+    justify-content: space-around;
+    color:white;
+}
 /*======================================
-Pins on image page
+            image page
 ======================================*/
 
 body {
@@ -267,33 +277,24 @@ Footer style
 #footer, .push {
     height:8vw;
 }
-#footer {
+.footer-container {
+    background-color: #222222;
+    display:flex;
+    width:100%;
     padding: 0px;
-    /*display: flex;*/
-    /*justify-content: space-between ;*/
     bottom:0;
+    left:0;
 }
 
-.footer-top {
-    padding:0px;
-    /*background-color: #b3d4fc;*/
-    color: white;
-}
-
-.footer-top p {
-    background-color: aqua;
+.footer-item{
+    justify-content: space-around;
+    width:33%;
+    color:white;
     text-align: center;
 }
 
-.footer-bottom {
-    background-color: #999999;
-    /*display:inline-block;*/
-    justify-content: center;
-    color: white;
-}
-.footer-bottom p {
-    text-align: center;
-}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
